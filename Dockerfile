@@ -5,7 +5,7 @@ ENV ANDROID_NDK_HOME /opt/android-ndk
 ENV PATH ${PATH}:${ANDROID_NDK_HOME}
 
 # Install deps
-RUN apt-get update && apt-get install wget unzip > /dev/null
+RUN apt-get update && apt-get install wget unzip
 
 # Set ndk version
 ENV ANDROID_NDK_VERSION r15c

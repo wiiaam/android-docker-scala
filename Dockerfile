@@ -1,3 +1,5 @@
+FROM ubuntu:16.04
+
 # Set env variables
 ENV ANDROID_NDK_HOME /opt/android-ndk
 ENV PATH ${PATH}:${ANDROID_NDK_HOME}

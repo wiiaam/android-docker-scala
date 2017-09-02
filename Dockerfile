@@ -11,9 +11,9 @@ RUN apt-get -y install wget unzip openjdk-8-jdk >/dev/null
 
 # install sbt
 RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
-  apt-get update
-  apt-get install sbt
+  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823 && \
+  apt-get update && \ 
+  apt-get install sbt >/dev/null
 
 # Set ndk version
 ENV ANDROID_NDK_VERSION r15c

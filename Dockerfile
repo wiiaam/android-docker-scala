@@ -6,7 +6,7 @@ ENV ANDROID_HOME /opt/android-sdk
 ENV PATH ${PATH}:${ANDROID_NDK_HOME}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${PATH}
 
 # Install deps
-RUN apt-get update
+RUN apt-get update >/dev/null
 RUN apt-get -y install wget unzip openjdk-8-jdk >/dev/null
 
 # install sbt

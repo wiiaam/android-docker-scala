@@ -7,7 +7,7 @@ ENV PATH ${PATH}:${ANDROID_NDK_HOME}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools
 
 # Install deps
 RUN apt-get update >/dev/null
-RUN apt-get -y install wget unzip openjdk-8-jdk >/dev/null
+RUN apt-get -y install wget unzip openjdk-8-jdk apt-transport-https >/dev/null
 
 # install sbt
 RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
